@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restoran Kami</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Hero Section with background image */
+        header {
+            background-image: url('gambar.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+
+        /* Customizing the hero content */
+        .hero-content {
+            background-color: rgba(75, 85, 99, 0.6); /* Semi-transparent background for readability */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            color: white;
+            text-align: center;
+        }
+
+        /* Section with class 'home' */
+        section.home {
+            background-image: url('amel.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Hero Section -->
+    <header>
+        <div class="hero-content">
+            <h2 class="text-5xl font-bold">Selamat Datang di Restoran Kami</h2>
+            <p class="mt-4 text-lg">Nikmati berbagai hidangan spesial kami!</p>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <section class="home flex justify-center items-center">
+        <div class="text-center text-white p-6">
+            <h3 class="text-4xl font-semibold">Hidangan Terbaik</h3>
+            <p class="mt-4 text-xl">Kami menyajikan masakan terbaik untuk Anda nikmati dengan orang-orang tersayang.</p>
+        </div>
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Restoran</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Efek transisi halus pada item menu saat hover */
+        .menu-item {
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+        }
+
+        /* Efek saat hover pada menu */
+        .menu-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Memberikan bayangan pada teks */
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Efek untuk harga, memberi jarak dan ketebalan font */
+        .price {
+            font-size: 1.125rem; /* Ukuran font lebih besar */
+            font-weight: 600;
+            color: #F97316; /* Warna oranye untuk harga */
+        }
+
+        /* Mengatur jarak antara elemen dan tata letak */
+        .menu-item .menu-name {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #1F2937; /* Warna teks lebih gelap */
+        }
+
+        /* Menambahkan margin pada menu container */
+        #menu {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Padding dan layout untuk kolom menu */
+        .menu-column {
+            padding: 20px;
+        }
+
+        /* Penyesuaian untuk tampilan di layar kecil */
+        .menu-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        /* Responsive layout untuk tampilan lebih besar */
+        @media (min-width: 768px) {
+            .menu-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+ <!-- Navbar -->
+    <nav class="bg-indigo-600 p-4 fixed w-full z-10 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-white text-2xl font-bold">Restoran Semarang Solid</h1>
+            <ul class="flex space-x-4 text-white font-semibold">
+                <li><a href="#home" class="hover:text-indigo-300">Home</a></li>
+                <li><a href="menu.html" class="hover:text-indigo-300">Menu</a></li>
+                <li><a href="tentang.html" class="hover:text-indigo-300">Tentang</a></li>
+                <li><a href="#kontak" class="hover:text-indigo-300">Kontak</a></li>
+                <li><a href="map.html" class="hover:text-indigo-300">Peta</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Menu Section -->
+    <section id="menu" class="container mx-auto px-6 menu-container">
+        <!-- Kolom 1 -->
+        <div class="menu-column">
+            <h2 class="text-4xl font-bold text-orange-600 mb-6 border-b-4 border-orange-400 pb-2 text-shadow">Menu Nasi dan Ayam</h2>
+            <div class="space-y-6">
+                <div class="menu-item flex justify-between p-6 bg-orange-100 shadow-lg rounded-xl hover:bg-orange-200">
+                    <span class="menu-name">Nasi Udang Tepung</span>
+                    <span class="price">Rp. 30.000</span>
+                </div>
+                <div class="menu-item flex justify-between p-6 bg-orange-100 shadow-lg rounded-xl hover:bg-orange-200">
+                    <span class="menu-name">Nasi Udang Asam Pedas</span>
+                    <span class="price">Rp. 30.000</span>
+                </div>
+                <div class="menu-item flex justify-between p-6 bg-orange-100 shadow-lg rounded-xl hover:bg-orange-200">
+                    <span class="menu-name">Nasi Ikan Asam Pedas</span>
+                    <span class="price">Rp. 25.000</span>
+                </div>
+                <div class="menu-item flex justify-between p-6 bg-orange-100 shadow-lg rounded-xl hover:bg-orange-200">
+                    <span class="menu-name">Nasi Ikan Kuah Asam</span>
+                    <span class="price">Rp. 25.000</span>
+                </div>
+                <div class="menu-item flex justify-between p-6 bg-orange-100 shadow-lg rounded-xl hover:bg-orange-200">
+                    <span class="menu-name">Nasi Ayam Bumbu</span>
+                    <span class="price">Rp. 25.000</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kolom 2 -->
+        <div class="menu-column">
+            <h2 class="text-4xl font-bold text-blue-600 mb-6 border-b-4 border-blue-400 pb-2 text-shadow">Menu Nasi & Mie</h2>
+            <div class="space-y-6">
+                <div class="menu-item flex justify-between p-6 bg-blue-100 shadow-lg rounded-xl hover:bg-blue-200">
+                    <span class="menu-name">Nasi Goreng</span>
+                    <span class="price">Rp. 18.000</span>
+                </div>
+                <div class="menu-item flex justify-between p-6 bg-blue-100 shadow-lg rounded-xl hover:bg-blue-200">
+                    <span class="menu-name">Nasi Campur</span>
+                    <span class="price">Rp. 18.000</span>
+                </div>
+                <div class="menu-item flex justify-between p-6 bg-blue-100 shadow-lg rounded-xl hover:bg-blue-200">
+                    <span class="menu-name">Mie Goreng</span>
+                    <span class="price">Rp. 18.000</span>
+                </div>
+                <div class="menu-item flex justify-between p-6 bg-blue-100 shadow-lg rounded-xl hover:bg-blue-200">
+                    <span class="menu-name">Bihun Goreng</span>
+                    <span class="price">Rp. 18.000</span>
+                </div>
+                <div class="menu-item flex justify-between p-6 bg-blue-100 shadow-lg rounded-xl hover:bg-blue-200">
+                    <span class="menu-name">Mie Ayam Bakso</span>
+                    <span class="price">Rp. 18.000</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
